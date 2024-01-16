@@ -15,6 +15,12 @@ spec:
     hosts:
     - "*"
   - port:
+      number: 8087
+      name: grafana-http
+      protocol: HTTP
+    hosts:
+    - "*"
+  - port:
       number: 8086
       name: influxdb-http
       protocol: HTTP

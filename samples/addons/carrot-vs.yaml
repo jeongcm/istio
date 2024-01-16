@@ -128,11 +128,10 @@ spec:
   gateways:
   - carrot-gateway
   http:
-  - match:
-    - uri:
-        prefix: /grafana
-    route:
-    - destination:
-        host: grafana.istio-system.svc.cluster.local
-        port:
-          number: 3000
+    - match:
+      - port: 8087
+      route:
+      - destination:
+          host: grafana.default.svc.cluster.local
+          port:
+            number: 3000
